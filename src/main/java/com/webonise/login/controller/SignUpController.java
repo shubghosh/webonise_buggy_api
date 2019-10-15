@@ -22,7 +22,7 @@ public class SignUpController {
         System.out.println(userRequest.getLoginId());
         Object chk = userService.saveUser(userRequest);
         if(chk == null){
-            return false;
+            return "LoginId Exists";
         }
         else{
             return chk;
